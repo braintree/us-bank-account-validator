@@ -1,0 +1,10 @@
+test/
+dist/
+.travis.yml
+.gitignore
+.eslintrc
+.eslintignore
+.nvmrc
+bower.json
+.npmignore
+*.md
