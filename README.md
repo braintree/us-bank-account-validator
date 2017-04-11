@@ -6,7 +6,7 @@ US Bank Account Validator provides validation utilities for US bank routing and 
 Installation
 ------------
 
-You can install card-validator through npm.
+You can install us-bank-account-validator through npm.
 
 ```sh
 npm install us-bank-account-validator
