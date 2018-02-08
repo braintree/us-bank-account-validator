@@ -25,7 +25,7 @@ describe('accountNumber', function () {
     });
   });
 
-  it('is potentially valid for partial stirngs', function () {
+  it('is potentially valid for partial strings', function () {
     [
       '',
       '0',
