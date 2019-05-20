@@ -4,6 +4,7 @@ var routingNumberList = require('./routing-number-list');
 
 var allowedRoutingNumbers = routingNumberList.reduce(function (result, number) {
   result[number] = true;
+
   return result;
 }, Object.create(null));
 

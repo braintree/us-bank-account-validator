@@ -11,23 +11,14 @@
   "scripts": {
     "lint": "eslint .",
     "test": "npm run lint && mocha",
-    "build": "gulp build",
     "build-routing-list": "node scripts/build-routing-list"
   },
   "author": "Braintree <code@getbraintree.com> (https://www.braintreepayments.com/)",
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "chai": "^2.1.2",
-    "del": "^2.2.2",
-    "eslint": "2.7.0",
-    "eslint-config-braintree": "1.0.0",
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-size": "^2.1.0",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^2.0.0",
-    "mocha": "^3.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-braintree": "^2.0.0",
+    "mocha": "^6.1.4"
   }
 }
