@@ -21,6 +21,7 @@ result = result.concat(routingNumbers.map(function (number, index) {
   if (index + 1 < routingNumbers.length) {
     return "  '" + number + "',";
   }
+
   return "  '" + number + "'";
 }));
 
