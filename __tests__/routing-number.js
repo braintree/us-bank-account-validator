@@ -1,8 +1,5 @@
-'use strict';
-
-var expect = require('chai').expect;
-var routingNumber = require('../src/routing-number');
-var routingToBankname = require('./routing-to-bank-name');
+const routingNumber = require('../src/routing-number');
+const routingToBankname = require('./routing-to-bank-name');
 
 describe('routingNumber', function () {
   it('is invalid for non-strings', function () {
@@ -18,7 +15,7 @@ describe('routingNumber', function () {
       {},
       new String('322484401') // eslint-disable-line no-new-wrappers
     ].forEach(function (value) {
-      expect(routingNumber(value)).to.deep.equal({
+      expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false
       });
@@ -37,7 +34,7 @@ describe('routingNumber', function () {
       '3224844',
       '32248440'
     ].forEach(function (value) {
-      expect(routingNumber(value)).to.deep.equal({
+      expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: true
       });
@@ -46,7 +43,7 @@ describe('routingNumber', function () {
 
   it('is valid for correct numbers', function () {
     Object.keys(routingToBankname).forEach(function (value) {
-      expect(routingNumber(value)).to.deep.equal({
+      expect(routingNumber(value)).toEqual({
         isValid: true,
         isPotentiallyValid: true
       });
@@ -59,7 +56,7 @@ describe('routingNumber', function () {
       '32248440100',
       '0322484401'
     ].forEach(function (value) {
-      expect(routingNumber(value)).to.deep.equal({
+      expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false
       });
@@ -74,7 +71,7 @@ describe('routingNumber', function () {
       'a074986820',
       '074986820o'
     ].forEach(function (value) {
-      expect(routingNumber(value)).to.deep.equal({
+      expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false
       });

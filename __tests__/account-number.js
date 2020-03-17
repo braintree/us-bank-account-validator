@@ -1,7 +1,4 @@
-'use strict';
-
-var expect = require('chai').expect;
-var accountNumber = require('../src/account-number');
+const accountNumber = require('../src/account-number');
 
 describe('accountNumber', function () {
   it('is invalid for non-strings', function () {
@@ -18,7 +15,7 @@ describe('accountNumber', function () {
       {},
       new String('322484401') // eslint-disable-line no-new-wrappers
     ].forEach(function (value) {
-      expect(accountNumber(value)).to.deep.equal({
+      expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false
       });
@@ -32,7 +29,7 @@ describe('accountNumber', function () {
       '01',
       '012'
     ].forEach(function (value) {
-      expect(accountNumber(value)).to.deep.equal({
+      expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: true
       });
@@ -51,7 +48,7 @@ describe('accountNumber', function () {
       '01234567890',
       '-----------'
     ].forEach(function (value) {
-      expect(accountNumber(value)).to.deep.equal({
+      expect(accountNumber(value)).toEqual({
         isValid: true,
         isPotentiallyValid: true
       });
@@ -66,7 +63,7 @@ describe('accountNumber', function () {
       'ba01234567890123456',
       '-------------------'
     ].forEach(function (value) {
-      expect(accountNumber(value)).to.deep.equal({
+      expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false
       });
