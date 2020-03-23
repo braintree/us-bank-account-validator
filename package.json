@@ -10,15 +10,15 @@
   "homepage": "https://github.com/braintree/us-bank-account-validator",
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && mocha",
+    "posttest": "npm run lint",
+    "test": "jest",
     "build-routing-list": "node scripts/build-routing-list"
   },
   "author": "Braintree <code@getbraintree.com> (https://www.braintreepayments.com/)",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^4.2.0",
     "eslint": "^6.2.2",
     "eslint-config-braintree": "^4.0.0",
-    "mocha": "^6.2.0"
+    "jest": "^25.1.0"
   }
 }
