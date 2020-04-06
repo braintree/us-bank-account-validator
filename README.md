@@ -1,10 +1,8 @@
-US Bank Account Validator
-=========================
+# US Bank Account Validator
 
 US Bank Account Validator provides validation utilities for US bank routing and account numbers. It includes first-class support for "potential" validity so you can use it to present appropriate UI to your user as they type.
 
-Installation
-------------
+## Installation
 
 You can install us-bank-account-validator through npm.
 
@@ -12,15 +10,14 @@ You can install us-bank-account-validator through npm.
 npm install us-bank-account-validator
 ```
 
-Example
--------
+## Example
 
 In Node/Webpack/Browserify:
 
 ```js
-var valid = require('us-bank-account-validator');
+var valid = require("us-bank-account-validator");
 
-var routingValidation = valid.routingNumber('4111');
+var routingValidation = valid.routingNumber("4111");
 
 if (routingValidation.isValid) {
   renderFullyValidRoutingNumber();
@@ -34,18 +31,17 @@ In the browser with `<script>` tags:
 ```html
 <script src="path/to/us-bank-account-validator.js"></script>
 <script>
-var accountValidation = valid.accountNumber('4111');
+  var accountValidation = valid.accountNumber("4111");
 
-if (accountValidation.isValid) {
-  renderFullyValidAccountNumber();
-} else if (!accountValidation.isPotentiallyValid) {
-  renderInvalidAccountNumber();
-}
+  if (accountValidation.isValid) {
+    renderFullyValidAccountNumber();
+  } else if (!accountValidation.isPotentiallyValid) {
+    renderInvalidAccountNumber();
+  }
 </script>
 ```
 
-API
----
+## API
 
 ### `valid.routingNumber(value: string): object`
 
