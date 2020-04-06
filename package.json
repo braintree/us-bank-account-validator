@@ -9,6 +9,7 @@
   },
   "homepage": "https://github.com/braintree/us-bank-account-validator",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "prettier --write .",
     "build": "tsc",
     "lint": "eslint --ext js,ts .",
