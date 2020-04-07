@@ -23,7 +23,7 @@ export default function (value): BankValidity {
   }
 
   return {
-    isValid: isValid,
+    isValid,
     isPotentiallyValid: isValid || isPotentiallyValid,
   };
 }

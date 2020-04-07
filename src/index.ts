@@ -1,7 +1,2 @@
-import routingNumber from "./routing-number";
-import accountNumber from "./account-number";
-
-export = {
-  routingNumber,
-  accountNumber,
-};
+export { default as routingNumber } from "./routing-number";
+export { default as accountNumber } from "./account-number";

@@ -1,4 +1,4 @@
-export interface BankValidity {
+export type BankValidity = {
   isValid: boolean;
   isPotentiallyValid: boolean;
-}
+};
