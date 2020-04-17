@@ -1,8 +1,8 @@
 import routingNumber from "../routing-number";
 import * as routingToBankname from "./routing-to-bank-name.json";
 
-describe("routingNumber", function () {
-  it("is invalid for non-strings", function () {
+describe("routingNumber", () => {
+  it("is invalid for non-strings", () => {
     [
       0,
       1,
@@ -14,7 +14,7 @@ describe("routingNumber", function () {
       [],
       {},
       new String("322484401"), // eslint-disable-line no-new-wrappers
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
@@ -22,7 +22,7 @@ describe("routingNumber", function () {
     });
   });
 
-  it("is potentially valid for partial strings", function () {
+  it("is potentially valid for partial strings", () => {
     [
       "",
       "3",
@@ -33,7 +33,7 @@ describe("routingNumber", function () {
       "322484",
       "3224844",
       "32248440",
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: true,
@@ -41,8 +41,8 @@ describe("routingNumber", function () {
     });
   });
 
-  it("is valid for correct numbers", function () {
-    Object.keys(routingToBankname).forEach(function (value) {
+  it("is valid for correct numbers", () => {
+    Object.keys(routingToBankname).forEach((value) => {
       expect(routingNumber(value)).toEqual({
         isValid: true,
         isPotentiallyValid: true,
@@ -50,8 +50,8 @@ describe("routingNumber", function () {
     });
   });
 
-  it("is invalid for numbers that are too long", function () {
-    ["3224844012", "32248440100", "0322484401"].forEach(function (value) {
+  it("is invalid for numbers that are too long", () => {
+    ["3224844012", "32248440100", "0322484401"].forEach((value) => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
@@ -59,14 +59,14 @@ describe("routingNumber", function () {
     });
   });
 
-  it("is invalid for values not in the list", function () {
+  it("is invalid for values not in the list", () => {
     [
       "999999999",
       "074986820 ",
       " 074986820",
       "a074986820",
       "074986820o",
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,

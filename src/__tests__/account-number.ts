@@ -1,7 +1,7 @@
 import accountNumber from "../account-number";
 
-describe("accountNumber", function () {
-  it("is invalid for non-strings", function () {
+describe("accountNumber", () => {
+  it("is invalid for non-strings", () => {
     [
       0,
       1,
@@ -14,7 +14,7 @@ describe("accountNumber", function () {
       [],
       {},
       new String("322484401"), // eslint-disable-line no-new-wrappers
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
@@ -22,8 +22,8 @@ describe("accountNumber", function () {
     });
   });
 
-  it("is potentially valid for partial strings", function () {
-    ["", "0", "01", "012"].forEach(function (value) {
+  it("is potentially valid for partial strings", () => {
+    ["", "0", "01", "012"].forEach((value) => {
       expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: true,
@@ -31,7 +31,7 @@ describe("accountNumber", function () {
     });
   });
 
-  it("is valid for strings between 4 and 17 characters long", function () {
+  it("is valid for strings between 4 and 17 characters long", () => {
     [
       "0000",
       "1234",
@@ -42,7 +42,7 @@ describe("accountNumber", function () {
       "0123456789012345",
       "01234567890",
       "-----------",
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(accountNumber(value)).toEqual({
         isValid: true,
         isPotentiallyValid: true,
@@ -50,14 +50,14 @@ describe("accountNumber", function () {
     });
   });
 
-  it("is invalid for strings that are too long", function () {
+  it("is invalid for strings that are too long", () => {
     [
       "012345678901234567",
       "01234567890123456  ",
       "0123456789012345699",
       "ba01234567890123456",
       "-------------------",
-    ].forEach(function (value) {
+    ].forEach((value) => {
       expect(accountNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
