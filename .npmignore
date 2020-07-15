@@ -1,5 +1,5 @@
 test/
-dist/
+src/
 .travis.yml
 .gitignore
 .eslintrc
