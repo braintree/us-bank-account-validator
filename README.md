@@ -73,4 +73,4 @@ Will return something like this:
 }
 ```
 
-Valid account numbers are strings between 4 and characters. They are usually numeric but not always, which is why this is a simple length check.
+Valid account numbers are strings between 4 and 17 characters. They are usually numeric but not always, which is why this is a simple length check.
