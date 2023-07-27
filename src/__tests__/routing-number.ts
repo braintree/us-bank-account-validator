@@ -18,6 +18,7 @@ describe("routingNumber", () => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
+        isCheckDigitValid: false,
       });
     });
   });
@@ -37,6 +38,7 @@ describe("routingNumber", () => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: true,
+        isCheckDigitValid: false,
       });
     });
   });
@@ -46,6 +48,7 @@ describe("routingNumber", () => {
       expect(routingNumber(value)).toEqual({
         isValid: true,
         isPotentiallyValid: true,
+        isCheckDigitValid: true,
       });
     });
   });
@@ -55,6 +58,7 @@ describe("routingNumber", () => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
+        isCheckDigitValid: false,
       });
     });
   });
@@ -70,6 +74,7 @@ describe("routingNumber", () => {
       expect(routingNumber(value)).toEqual({
         isValid: false,
         isPotentiallyValid: false,
+        isCheckDigitValid: false,
       });
     });
   });
