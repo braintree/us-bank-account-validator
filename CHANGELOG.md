@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 1.0.1
 
 - Updates (sub-)dependencies
   - `braces` to 3.0.3
