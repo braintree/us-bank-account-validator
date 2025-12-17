@@ -57,7 +57,7 @@ Will return something like this:
 }
 ```
 
-Valid routing numbers come from a hard-coded list of possible numbers, which you can find in `src/routing-number-list.js`.
+Valid routing numbers are checked against [MICR number format](https://en.wikipedia.org/wiki/Routing_transit_number#MICR_routing_number_format). We test this formula against a number of known routing numbers, which can be found at `src/routing-to-bank-name.json`.
 
 ### `valid.accountNumber(value: string): object`
 

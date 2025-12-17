@@ -50,6 +50,14 @@ describe("routingNumber", () => {
     });
   });
 
+  it("can validate a potentially valid routing number dynamically", () => {
+    // 645442104 is not an assigned routing number, but has a valid form
+    expect(routingNumber("645442104")).toEqual({
+      isValid: true,
+      isPotentiallyValid: true,
+    });
+  });
+
   it("is invalid for numbers that are too long", () => {
     ["3224844012", "32248440100", "0322484401"].forEach((value) => {
       expect(routingNumber(value)).toEqual({
@@ -59,7 +67,7 @@ describe("routingNumber", () => {
     });
   });
 
-  it("is invalid for values not in the list", () => {
+  it("is returns false for invalid routing numbers", () => {
     [
       "999999999",
       "074986820 ",
