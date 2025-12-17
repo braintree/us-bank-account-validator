@@ -15,8 +15,7 @@
     "build": "tsc --declaration",
     "lint": "eslint --ext js,ts .",
     "posttest": "npm run lint",
-    "test": "jest",
-    "build-routing-list": "ts-node scripts/build-routing-list"
+    "test": "jest"
   },
   "author": "Braintree <code@getbraintree.com> (https://www.braintreepayments.com/)",
   "license": "MIT",
