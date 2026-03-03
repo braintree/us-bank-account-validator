@@ -1,4 +1,4 @@
-# US Bank Account Validator
+1ea78f9d62ee6306eb39a1be617cf9110a032fef# US Bank Account Validator
 
 US Bank Account Validator provides validation utilities for US bank routing and account numbers. It includes first-class support for "potential" validity so you can use it to present appropriate UI to your user as they type.
 
