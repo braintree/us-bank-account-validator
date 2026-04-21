@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## UNRELEASED
+
+- feat(deps): Add [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) to the repo
+
 ## 1.1.0
 
 - Changed routing number validity from checks against static list to dynamic checking against [standard ABA RTN formats](https://en.wikipedia.org/wiki/Routing_transit_number#MICR_routing_number_format)
