@@ -26,7 +26,7 @@ const checkRTNAlgorithmically = (abaRoutingNumber: string): boolean => {
   if (!/^\d+$/.test(abaRoutingNumber)) return false;
   if (abaRoutingNumber.length !== 9) return false;
 
-  const firstTwoDigits = Number(abaRoutingNumber.substring(0, 1));
+  const firstTwoDigits = Number(abaRoutingNumber.substring(0, 2));
 
   if (
     !(firstTwoDigits >= 0 && firstTwoDigits <= 12) &&
